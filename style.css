@@ -1,0 +1,407 @@
+/* ==========================================
+   עיצוב כללי - מותאם לפרויקט סיום (13304)
+   ========================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; /* מגדיר שהגלילה "תיתפס" על כל אזור */
+}
+/* איפוס בסיסי ופונט גלובלי */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F9FF;
+  color: #0D2137;
+  line-height: 1.6;
+}
+
+/* ביטול קו תחתון מכל הקישורים ושינוי צבע */
+a {
+  text-decoration: none;
+  color: #2B7FFF;
+}
+
+/* ==========================================
+   עיצוב התפריט העליון (Header + Nav)
+   ========================================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* גיוון סלקטורים: שימוש בסלקטור בן ישיר */
+header > nav {
+  background-color: #ffffff;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* כותרת H1 (שהיא הלוגו בעמוד הבית) */
+header > nav h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header > nav h1 a {
+  color: #1A3A5C;
+}
+
+/* סלקטור היררכי רגיל לתפריט */
+.main-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.main-menu li a {
+  font-weight: bold;
+  color: #5A7A99;
+  padding: 5px 10px;
+}
+
+/* שינוי עיצוב במעבר עכבר */
+.main-menu li a:hover {
+  color: #2B7FFF;
+  border-bottom: 2px solid #2B7FFF;
+}
+
+.main-menu li a.active {
+  color: #1A3A5C;
+  border-bottom: 2px solid #1A3A5C;
+}
+
+/* ==========================================
+   עיצוב אזורים מרכזיים בעמוד
+   ========================================== */
+
+/* ==========================================
+   הגדלת אזור התוכן המרכזי
+   ========================================== */
+main {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* ==========================================
+   הוספת אוויר לנשימה מתחת לאזור הפתיח (הכחול)
+   ========================================== */
+section {
+  height: 100vh; /* כל אזור תופס בדיוק 100% מגובה המסך */
+  width: 100%;
+  scroll-snap-align: start; /* הגלגלת עוצרת בדיוק בתחילת האזור */
+
+  /* מירכוז התוכן לאמצע המסך */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 70px; /* הרחקה מהתפריט הצף */
+}
+
+#hero-section {
+  background-color: #1A3A5C;
+  color: white;
+  text-align: center;
+}
+
+/* סלקטור למחלקות (Class) */
+.new-release {
+  color: #00C2A8;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#hero-section h2 {
+  font-size: 64px; /* הגדלתי מ-36px, את יכולה לשחק עם המספר הזה עד שזה ייראה לך מושלם */
+  margin-bottom: 20px; /* הוספתי קצת רווח למטה כדי שלא יידבק לטקסט שאחריו */
+  line-height: 1.2; /* עוזר לשמור על רווח יפה בין שתי השורות של הכותרת */
+}
+
+/* כפתורים */
+.btn {
+  display: inline-block;
+  background-color: #2B7FFF;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #1A3A5C;
+}
+
+/* ==========================================
+   עיצוב אזור היתרונות (כרטיסיות)
+   ========================================== */
+
+#benefits {
+  background-color: #F5F9FF;
+}
+
+#how-it-works {
+  background-color: white;
+}
+
+.section-subtitle {
+  color: #2B7FFF;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center; /* ממרכז את כל הכרטיסיות לאמצע המסך */
+  gap: 40px; /* רווח יפה ואוורירי בין כרטיסייה לכרטיסייה */
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* כרטיסייה בודדת */
+.card {
+  background-color: white;
+  border: none; /* הסרנו את המסגרת הרגילה לטובת צל */
+  border-radius: 20px; /* פינות מעוגלות יותר כמו בתמונה */
+  padding: 50px 30px; /* ריווח פנימי גדול (למעלה/למטה) למראה ארוך */
+  width: 280px; /* רוחב קבוע שהופך אותן לצרות */
+  text-align: center; /* ממרכז את כל הטקסט בפנים */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* צל עדין ורך */
+}
+
+.card img {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto 25px auto; /* ממרכז את התמונה ודוחף את הטקסט למטה */
+}
+.card h3 {
+  margin: 0 0 15px 0;
+  color: #1A3A5C;
+  font-size: 20px;
+}
+
+.card p {
+  margin: 0;
+  color: #5A7A99;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* גיוון סלקטורים: אלמנט זוגי (חובה לשמור לפי הנחיות הפרויקט!) */
+.cards-container article:nth-child(even) {
+  background-color: #FAFCFF; /* גוון תכלת כמעט לבן כדי לא להרוס את העיצוב אבל לשמור על הניקוד */
+}
+
+/* ==========================================
+   עיצוב אזור "איך זה עובד" (רשימה)
+   ========================================== */
+
+#how-it-works {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* המעטפת של שני הצדדים מבוססת על Flexbox */
+.split-layout {
+  display: flex;
+  align-items: center; /* ממרכז את שני הצדדים אנכית אחד מול השני */
+  justify-content: space-between;
+  gap: 80px; /* רווח נשימה יפה בין הטקסט לתמונה */
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+}
+
+/* צד שמאל - הגדרות טקסט */
+.text-side {
+  flex: 1; /* לוקח חצי מהמקום */
+  text-align: left; /* מיישר את כל הטקסט לשמאל כמו שביקשת */
+}
+
+.text-side h2 {
+  font-size: 46px;
+  color: #1A3A5C;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* סלקטור בן ישיר - מיישם עיצוב רק על פסקאות שהן מיד תחת צד שמאל */
+.text-side > p {
+  color: #5A7A99;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 40px; /* רווח לפני הרשימה הממוספרת */
+}
+
+/* עיצוב הרשימה הממוספרת ללא נקודות רגילות */
+.steps-list {
+  list-style-type: none; /* מסיר את הנקודות הדיפולטיביות של הרשימה */
+  padding: 0;
+  margin: 0;
+}
+
+.steps-list li {
+  display: flex; /* מסדר את המספר ואת הטקסט באותה שורה */
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* עיצוב המספרים (01, 02...) */
+.step-num {
+  color: #2B7FFF;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* עיצוב הטקסט עצמו בתוך הרשימה */
+.step-text {
+  color: #5A7A99;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.step-text strong {
+  color: #1A3A5C;
+}
+
+/* צד ימין - הגדרות תמונה */
+.image-side {
+  flex: 1; /* לוקח את החצי השני של המקום */
+  display: flex;
+  justify-content: center;
+}
+
+/* מוודא שהתמונה לא תגלוש מחוץ לאזור שלה */
+.image-side img {
+  max-width: 100%;
+  max-height: 65vh; /* מגביל את הגובה המקסימלי כך שישאיר מקום בתחתית ובראש המסך */
+  width: auto; /* שומר על הפרופורציות הטבעיות של התמונה */
+  object-fit: contain; /* פקודה מצוינת שמבטיחה שהתמונה כולה תוצג מבלי להיחתך לעולם */
+}
+
+/* ==========================================
+   עיצוב אזור טופס צור קשר - מעודכן למסך יחיד
+   ========================================== */
+#contact-section {
+  background-color: #F5F9FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 80px; /* רווח מהתפריט הצף */
+
+  /* התיקון הקריטי: מאפשר לאזור לגדול מעבר למסך אחד אם הטופס ארוך מדי למסך שלך */
+  min-height: 100vh;
+  height: auto;
+}
+
+.contact-container {
+  margin: 20px auto 40px auto; /* ממרכז ומרחיק את הטופס מהפוטר */
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.simple-form {
+  text-align: left;
+  margin-top: 15px; /* פחות רווח מתחת לכותרות */
+}
+
+.form-group {
+  margin-bottom: 12px; /* צמצום הרווח בין שדה לשדה */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 3px; /* הקטנת הרווח בין הלייבל לשדה עצמו */
+  font-weight: bold;
+  color: #1A3A5C;
+  font-size: 14px; /* פונט קצת יותר עדין ללייבלים */
+}
+
+/* סימון שדות חובה ויזואלית */
+.required {
+  color: red;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px; /* הקטנת גובה השדה */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2B7FFF;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #2B7FFF;
+  color: white;
+  padding: 10px; /* כפתור קצת פחות גבוה */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #1A3A5C;
+}
+
+/* ==========================================
+   עיצוב אזור תחתון (Footer)
+   ========================================== */
+
+footer {
+  background-color: #1A3A5C;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* הקסם השני: אומר לדפדפן שמותר לו לעצור גם בסוף הפוטר ולא רק לזרוק אותך למעלה! */
+  scroll-snap-align: end;
+  margin-top: auto; /* דוחף את הפוטר תמיד לתחתית האזור */
+}
+
+.footer-content p {
+  margin: 3px 0;
+  font-size: 13px;
+}

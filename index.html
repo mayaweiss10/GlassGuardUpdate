@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GlassGuard - Premium blue light filtering glass screen protector.">
+    <title>GlassGuard - Home</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1><a href="index.html">GlassGuard</a></h1>
+
+        <ul class="main-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero-section">
+        <p class="new-release">New Release</p>
+        <h2>See Clearer.<br>Feel Better.</h2>
+        <p>GlassGuard filters harmful blue light with precision-engineered tempered glass.<br>Crystal clear protection for your eyes and your screen.</p>
+        <a href="contactUs.html" class="btn">Shop Now</a>
+    </section>
+
+    <section id="benefits">
+        <p class="section-subtitle">Why GlassGuard</p>
+        <h2>Protection engineered for modern screens</h2>
+
+        <div class="cards-container">
+            <article class="card">
+                <img src="images/eye_icon.png" alt="אייקון של עין המייצג הגנה על הראייה">
+                <h3>Eye Protection</h3>
+                <p>Filters up to 45% of harmful blue light, reducing eye strain, headaches, and sleep disruption caused by prolonged screen time.</p>
+            </article>
+
+            <article class="card">
+                <img src="images/shield_icon.png" alt="אייקון של מגן שילדה המייצג הגנה של זכוכית חזקה">
+                <h3>Tempered Glass</h3>
+                <p>9H hardness rated, shatterproof tempered glass absorbs impacts and prevents scratches from keys, coins, and everyday drops.</p>
+            </article>
+
+            <article class="card">
+                <img src="images/sun_icon.png" alt="אייקון של שמש המייצג בהירות">
+                <h3>Crystal Clear</h3>
+                <p>Advanced anti-glare coating maintains 99.9% screen clarity and true color accuracy without the yellow tint of cheap alternatives.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- אזור איך זה עובד -->
+    <section id="how-it-works">
+        <!-- יצרנו מעטפת (Flex) שתחזיק את שני הצדדים ביחד -->
+        <div class="split-layout">
+
+            <!-- צד שמאל: תוכן טקסטואלי -->
+            <div class="text-side">
+                <p class="section-subtitle">HOW IT WORKS</p>
+                <h2>Science meets simplicity</h2>
+                <p>Our proprietary nano-coating technology embeds blue-light-filtering particles directly into the glass during the tempering process. Unlike software solutions that dim your screen, GlassGuard works at the physical level — blocking harmful wavelengths while preserving the vibrant colors you love.</p>
+
+                <!-- רשימה מעוצבת לפי הדוגמה -->
+                <ul class="steps-list">
+                    <li>
+                        <span class="step-num">01</span>
+                        <span class="step-text"><strong>Clean</strong> — Wipe your screen with the included alcohol pad and microfiber cloth.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">02</span>
+                        <span class="step-text"><strong>Align</strong> — Use the positioning frame to place the protector with perfect accuracy.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">03</span>
+                        <span class="step-text"><strong>Apply</strong> — Press gently from the center outward — bubbles disappear automatically.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- צד ימין: תמונה -->
+            <div class="image-side">
+                <!-- חובה לשים כאן את הנתיב לתמונה שיצרת ולהשאיר את ה-alt! -->
+                <img src="images/screen_image.png" alt="המחשה של שכבות ההגנה במגן המסך GlassGuard">
+            </div>
+
+        </div>
+    </section>
+    <section id="contact-section">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">We would love to hear from you</p>
+
+            <form action="#" method="post" class="simple-form">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailAddress">Email <span class="required">*</span></label>
+                    <input type="email" id="emailAddress" name="emailAddress" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="050-0000000">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Order Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="100" placeholder="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="messageBox">Message <span class="required">*</span></label>
+                    <textarea id="messageBox" name="messageBox" placeholder="How can we help you?" rows="2" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 GlassGuard. All rights reserved.</p>
+                <p>פותח על ידי: פלג דאבוש ומיה וייס</p>
+                <p>במסגרת פרויקט לקורס "פיתוח אתרי אינטרנט" בשנה א', תשפ"ו</p>
+                <p>הפקולטה לטכנולוגיות למידה, HIT מכון טכנולוגי חולון</p>
+            </div>
+        </footer>
+    </section>
+
+</main>
+</body>
+</html>
