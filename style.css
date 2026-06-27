@@ -436,3 +436,31 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(43, 127, 255, 0.2);
 }
+
+/* ביטול הגובה המלא למפת האתר כדי שלא תתפרס על מסך שלם */
+#sitemap-section {
+    height: auto !important; /* מבטל את ה-100vh */
+    min-height: auto !important;
+    scroll-snap-align: none !important; /* מבטל את הנעילה לגובה המסך */
+    padding: 60px 20px;
+}
+
+/* אפקט ריחוף משופר לכרטיסי הניווט */
+.sitemap-card {
+    display: inline-block;
+    background-color: #F5F9FF;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    color: #1A3A5C;
+    text-decoration: none;
+    transition: all 0.3s ease; /* אנימציה חלקה */
+    border: 1px solid #e0e0e0;
+}
+
+.sitemap-card:hover {
+    background-color: #2B7FFF;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
