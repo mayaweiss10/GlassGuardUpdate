@@ -405,3 +405,34 @@ footer {
   margin: 3px 0;
   font-size: 13px;
 }
+
+#sitemap-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.sitemap-card {
+    background-color: #F5F9FF;
+    padding: 20px;
+    border-radius: 12px;
+    color: #1A3A5C;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.sitemap-card:hover {
+    background-color: #2B7FFF;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(43, 127, 255, 0.2);
+}
