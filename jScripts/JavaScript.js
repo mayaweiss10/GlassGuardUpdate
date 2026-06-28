@@ -68,7 +68,7 @@ function showSummary() {
         deviceName = "Samsung";
     }
 
-    // מערך פשוט ששומר את התוספות בעזרת מונה אינדקס (במקום push)
+    // מערך פשוט ששומר את התוספות בעזרת מונה אינדקס 
     const addonsArray = [];
     let addonIndex = 0; // משתנה שסופר באיזה תא אנחנו נמצאים במערך
 
@@ -81,7 +81,7 @@ function showSummary() {
         addonIndex++;
     }
 
-    // הפיכת המערך למחרוזת טקסט בעזרת לולאת for קלאסית
+    // הפיכת המערך למחרוזת טקסט בעזרת לולאת  
     let addonsText = "None";
     if (addonsArray.length > 0) {
         addonsText = "";
@@ -94,7 +94,7 @@ function showSummary() {
         }
     }
 
-    // שרשור מחרוזות בסיסי (עם +)
+    // שרשור מחרוזות בסיסי 
     const message = "Thank you, " + name + "!\n\n" +
         "Configuration Summary:\n" +
         "- Device: " + deviceName + "\n" +
