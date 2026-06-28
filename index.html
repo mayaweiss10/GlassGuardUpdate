@@ -16,14 +16,14 @@
 <body>
 
 <header>
-    <nav>
+    <nav aria-label="Main Navigation">
         <h1><a href="index.html">GlassGuard</a></h1>
 
         <ul class="main-menu">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="sitemap.html">Sitemap</a></li>
-            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="SiteMap.html">Sitemap</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
     </nav>
 </header>
@@ -33,20 +33,49 @@
         <p class="new-release">New Release</p>
         <h2>See Clearer.<br>Feel Better.</h2>
         <p>GlassGuard filters harmful blue light with precision-engineered tempered glass.<br>Crystal clear protection for your eyes and your screen.</p>
-        <a href="contactUs.html" class="btn">Shop Now</a>
+        <a href="ContactUs.html" class="btn">Shop Now</a>
     </section>
 
-    <section id="benefits">
-    <div class="about-intro" style="text-align: center; margin-bottom: 40px; max-width: 800px;">
-        <h2 style="color: #1A3A5C;">GlassGuard אודות</h2>
-        <p> הוקמה מתוך הבנה שבעולם הדיגיטלי של ימינו, העיניים שלנו זקוקות להגנה. GlassGuard
-        <br> האתר פותח על ידי פלג דאבוש ומיה וייס במסגרת פרויקט לקורס "פיתוח אתרי אינטרנט" (שנה א', תשפ"ו) במכון הטכנולוגי חולון (HIT) 
-        <br> תוך שימוש בטכנולוגיות ועמידה בעקרונות נגישות.</p>
+    <section id="about-and-benefits">
+        <div class="about-container">
 
-    </div>
+            <div class="about-english">
+                <p class="section-subtitle">OUR STORY</p>
+                <h2>Who We Are & What We Do</h2>
+                <p>GlassGuard was born from a modern challenge: we spend an average of 7 hours a day staring at screens. This relentless exposure to harmful blue light leads to eye fatigue, headaches, and disrupted sleep. Our mission is to provide an elegant, physical solution without compromising your screen's clarity or color accuracy.</p>
+                <p>Designed for students, professionals, and everyday tech users, our premium tempered glass screen protectors filter out harmful wavelengths while offering top-tier physical protection for your devices.</p>
+            </div>
 
-    <p class="section-subtitle">Why GlassGuard</p>
-    <h2>Protection engineered for modern screens</h2>
+            <hr class="about-divider">
+
+            <div class="about-hebrew" dir="rtl">
+                <h3>קרדיטים ומידע על הפרויקט</h3>
+                <p>פותח על ידי: פלג דאבוש ומיה וייס </p>
+                <p>במסגרת פרויקט לקורס "פיתוח אתרי אינטרנט" בשנה א', תשפ"ו. </p>
+                <p>האתר אופיין ועוצב לפי עקרונות של "עיצוב ממשק" ופותח ב- HTML5 ו-CSS3 תוך התחשבות בעקרונות "נגישות אתרים". </p>
+
+                <p class="pages-list">להלן המסכים שפותחו באתר:
+                    <a href="index.html">עמוד הבית</a> |
+                    <a href="about.html">אודות</a> |
+                    <a href="sitemap.html">מפת האתר</a> |
+                    <a href="contactUs.html">צור קשר</a> |
+                    <a href="interaction.html">טופס אינטראקטיבי</a>
+                </p>
+
+                <div class="faculty-credit">
+                    <p>הפקולטה לטכנולוגיות למידה </p>
+                    <p>HIT מכון טכנולוגי חולון </p>
+                    <img src="images/hit-logo.png" alt="לוגו מכון טכנולוגי חולון" class="hit-logo">
+                </div>
+            </div>
+
+        </div>
+        
+        <br>
+
+        <p id="benefits" > </p>
+        <h2 class="green">Why GlassGuard</h2> 
+        <h2>Protection engineered for modern screens</h2>
 
         <div class="cards-container">
             <article class="card">
@@ -79,7 +108,7 @@
                 <p class="section-subtitle">HOW IT WORKS</p>
                 <h2>Science meets simplicity</h2>
                 <p>Our proprietary nano-coating technology embeds blue-light-filtering particles directly into the glass during the tempering process. Unlike software solutions that dim your screen, GlassGuard works at the physical level — blocking harmful wavelengths while preserving the vibrant colors you love.</p>
-
+                <br>
                 <!-- רשימה מעוצבת לפי הדוגמה -->
                 <ul class="steps-list">
                     <li>
@@ -105,6 +134,38 @@
 
         </div>
     </section>
+
+    <section id="interactive-form" class="form-section">
+        <div class="interactive-card">
+            <h2>Personalize Your GlassGuard</h2>
+            <form id="guardForm">
+                <div class="field-group">
+                    <label>Your Name:</label>
+                    <input type="text" id="userName" placeholder="Enter your name">
+                </div>
+
+                <div class="field-group">
+                    <p>Choose your device:</p>
+                    <div class="radio-group">
+                        <label><input type="radio" id="radioIphone" name="device" value="iphone" class="device-radio">iPhone</label>
+                        <label><input type="radio" id="radioSamsung" name="device" value="samsung" class="device-radio">Samsung</label>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <p>Select Add-ons:</p>
+                    <label><input type="checkbox" id="addonCleaning" class="addon" value="cleaning"> Cleaning Kit +20</label>
+                    <label><input type="checkbox" id="addonAntiGlare" class="addon" value="anti-glare"> Anti-Glare Coating +50</label>
+                </div>
+
+                <button type="button" id="submitBtn" disabled>Save Configuration</button>
+                <div class="preview-area">
+                    <img id="productImage" src="images/standard_glass.png" alt="Preview">
+                </div>
+            </form>
+        </div>
+    </section>
+    
     <section id="contact-section">
         <div class="contact-container">
             <h2>Get In Touch</h2>
@@ -141,7 +202,7 @@
             </form>
         </div>
 
-        
+
         <footer>
             <div class="footer-content">
                 <p>&copy; 2026 GlassGuard. All rights reserved.</p>
@@ -153,16 +214,56 @@
     </section>
 
 
-  <section id="sitemap-section">
-    <h2>מפת האתר</h2>
-    <div class="sitemap-grid">
-        <a href="#hero-section" class="sitemap-card">🏠 דף הבית</a>
-        <a href="#benefits" class="sitemap-card">💡 אודות ויתרונות</a>
-        <a href="#how-it-works" class="sitemap-card">⚙️ איך זה עובד</a>
-        <a href="#contact-section" class="sitemap-card">📞 צור קשר</a>
-    </div>
-</section>
-    
+    <section id="sitemap-section">
+        <h2>מפת האתר</h2>
+        <p class="section-subtitle">העבירו את העכבר על הקטגוריות כדי לראות את האופציות</p>
+
+        <div class="sitemap-grid">
+
+            <div class="sitemap-block">
+                <a href="index.html" class="sitemap-main-link">🏠 דף הבית</a>
+                <ul class="sitemap-sub-links">
+                    <li><span class="disabled-link">מבצעים מיוחדים</span></li>
+                    <li><span class="disabled-link">המוצרים הנמכרים ביותר</span></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-block">
+                <a href="about.html" class="sitemap-main-link">💡 אודות ויתרונות</a>
+                <ul class="sitemap-sub-links">
+                    <li><span class="disabled-link">הסיפור שלנו</span></li>
+                    <li><span class="disabled-link">קריירה ודרושים</span></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-block">
+                <a href="HowDoesItWork.html" class="sitemap-main-link">⚙️ איך זה עובד</a>
+                <ul class="sitemap-sub-links">
+                    <li><span class="disabled-link">תוצאות בדיקות מעבדה</span></li>
+                    <li><span class="disabled-link">מדריך התקנה למשתמש</span></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-block">
+                <a href="interaction.html" class="sitemap-main-link">💻 בצע הזמנה</a>
+                <ul class="sitemap-sub-links">
+                    <li><span class="disabled-link">מגינים לאייפון</span></li>
+                    <li><span class="disabled-link">מעקב אחר משלוח</span></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-block">
+                <a href="ContactUs.html" class="sitemap-main-link">📞 צור קשר</a>
+                <ul class="sitemap-sub-links">
+                    <li><span class="disabled-link">שירות לקוחות</span></li>
+                    <li><span class="disabled-link">שאלות נפוצות (FAQ)</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
 </main>
+<script src="jScripts/JavaScript.js"></script>
 </body>
 </html>
